@@ -1,0 +1,11 @@
+tech_stack:
+1. react
+
+features:
+1. brief intro
+2. image
+3. experiences
+4. projects
+5. contact
+6. download cv
+7. book meeting
