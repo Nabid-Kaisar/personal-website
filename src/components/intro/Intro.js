@@ -1,9 +1,9 @@
 import Experience from "./Experience";
-import {Experience_Details} from "../../common/constants/CONSTANTS";
+import {EXPERIENCE_DETAILS} from "../../common/constants/CONSTANTS";
 
 export default function Intro() {
-    const {skill: konaSkill} = Experience_Details.kona
-    const {skill: syncSkill} = Experience_Details.sync
+    const {skill: konaSkill} = EXPERIENCE_DETAILS.kona
+    const {skill: syncSkill} = EXPERIENCE_DETAILS.sync
     return (
         <>
             <main>

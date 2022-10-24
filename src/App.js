@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Intro from "./components/intro/Intro";
+import Contact from "./components/contact/Contact";
+import AppContainer from "./components/containers/AppContainer";
 
 function App() {
     return (
-        <div>
+        <AppContainer>
             <Intro/>
-        </div>
+            <Contact/>
+        </AppContainer>
     );
 }
 
