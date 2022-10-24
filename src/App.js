@@ -1,6 +1,6 @@
 import AppContainer from "./components/containers/AppContainer";
 import Navigation from "./components/navigation/Navigation";
-import Greetings from "./components/greetings/Greetings";
+import "./App.css";
 
 function App() {
   return (
