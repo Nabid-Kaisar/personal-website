@@ -1,16 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Intro from "./components/intro/Intro";
-import Contact from "./components/contact/Contact";
 import AppContainer from "./components/containers/AppContainer";
+import Navigation from "./components/navigation/Navigation";
+import Greetings from "./components/greetings/Greetings";
 
 function App() {
-    return (
-        <AppContainer>
-            <Intro/>
-            <Contact/>
-        </AppContainer>
-    );
+  return (
+    <AppContainer>
+      <Navigation />
+    </AppContainer>
+  );
 }
 
 export default App;

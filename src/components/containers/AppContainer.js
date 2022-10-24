@@ -1,11 +1,8 @@
 const containerStyle = {
-    marginLeft: "2%"
-}
+  marginLeft: "2%",
+  marginTop: "1%",
+};
 
-export default function AppContainer({children}) {
-    return (
-        <div style={containerStyle}>
-            {children}
-        </div>
-    )
+export default function AppContainer({ children }) {
+  return <div style={containerStyle}>{children}</div>;
 }
