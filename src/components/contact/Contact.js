@@ -1,12 +1,20 @@
 import { CONTACT } from "../../common/constants/CONSTANTS";
 import { useState } from "react";
 
+const initialState = {
+  email: "",
+};
+
 export default function Contact() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialState.email);
 
   const handleEmailChange = (e) => {
     const { value: email } = e.target;
     setEmail(email);
+  };
+
+  const handleClearForm = () => {
+    setEmail(initialState.email);
   };
 
   const handleFormSubmit = () => {
@@ -38,7 +46,13 @@ export default function Contact() {
               name="email"
               type={"text"}
             />
-            <button onClick={handleFormSubmit}>Submit</button>
+            <br />
+            <button name="submit" onClick={handleFormSubmit} className="mr5">
+              Submit
+            </button>
+            <button name="clear" onClick={handleClearForm}>
+              Clear
+            </button>
           </fieldset>
         </section>
       </article>

@@ -3,3 +3,15 @@ header {
     color: darkblue;
     margin-bottom: 10px;
 }
+
+button[name='submit'] {
+    color: darkgreen;
+}
+
+button[name='clear'] {
+    color: darkred;
+}
+
+.mr5{
+    margin-right: 5px;
+}
