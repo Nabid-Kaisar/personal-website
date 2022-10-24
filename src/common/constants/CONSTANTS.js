@@ -1,6 +1,7 @@
 import Intro from "../../components/intro/Intro";
 import Contact from "../../components/contact/Contact";
 import Greetings from "../../components/greetings/Greetings";
+import Error from "../../components/error/Error";
 
 export const EXPERIENCE_DETAILS = {
   sync: { skill: "react, js, vanilla js, node.js" },
@@ -27,6 +28,11 @@ export const ROUTES = [
     pathName: "Contact",
     route: "/contact",
     component: Contact,
+  },
+  {
+    pathName: "404",
+    route: "*",
+    component: Error,
   },
 ];
 

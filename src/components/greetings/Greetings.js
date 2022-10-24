@@ -10,7 +10,11 @@ export default function Greetings() {
       </header>
       <nav>
         {LANDING_NAV_ROUTES.map((route, idx) => {
-          return <Link to={route.route}>{route.pathName}</Link>;
+          return (
+            <Link key={idx} to={route.route}>
+              {route.pathName}
+            </Link>
+          );
         })}
       </nav>
       <br />
