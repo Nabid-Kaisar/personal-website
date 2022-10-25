@@ -3,10 +3,12 @@ import { useState } from "react";
 
 const initialState = {
   email: "",
+  isSubmitted: false,
 };
 
 export default function Contact() {
   const [email, setEmail] = useState(initialState.email);
+  const [isSubmitted, setIsSubmitted] = useState(initialState.isSubmitted);
 
   const handleEmailChange = (e) => {
     const { value: email } = e.target;
@@ -15,18 +17,21 @@ export default function Contact() {
 
   const handleClearForm = () => {
     setEmail(initialState.email);
+    setIsSubmitted(initialState.isSubmitted);
   };
 
   const handleFormSubmit = () => {
     const reqBody = {
       email,
     };
-    console.log(reqBody);
+    if (!reqBody.email) return;
+
+    setIsSubmitted(true);
   };
 
   return (
     <>
-      <article>
+      <main>
         <section>
           <header>Get In Touch With Me:</header>
           <ul>
@@ -55,7 +60,13 @@ export default function Contact() {
             </button>
           </fieldset>
         </section>
-      </article>
+        <section>
+          <header>
+            {isSubmitted &&
+              "Your booking has been made! You will be notified via EMAIL."}
+          </header>
+        </section>
+      </main>
     </>
   );
 }

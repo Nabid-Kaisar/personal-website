@@ -17,22 +17,22 @@ export const ROUTES = [
   {
     pathName: "home",
     route: "/",
-    component: Greetings,
+    Component: Greetings,
   },
   {
     pathName: "Introduction",
     route: "/intro",
-    component: Intro,
+    Component: Intro,
   },
   {
     pathName: "Contact",
     route: "/contact",
-    component: Contact,
+    Component: Contact,
   },
   {
     pathName: "404",
     route: "*",
-    component: Error,
+    Component: Error,
   },
 ];
 
@@ -40,11 +40,11 @@ export const LANDING_NAV_ROUTES = [
   {
     pathName: "Introduction",
     route: "/intro",
-    component: Intro,
+    Component: Intro,
   },
   {
     pathName: "Contact",
     route: "/contact",
-    component: Contact,
+    Component: Contact,
   },
 ];

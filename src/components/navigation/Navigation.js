@@ -11,7 +11,7 @@ export default function Navigation() {
               style={{ marginRight: "5px" }}
               key={idx}
               path={RouteInfo.route}
-              element={<RouteInfo.component />}
+              element={<RouteInfo.Component />}
             >
               {RouteInfo.pathName}
             </Route>
