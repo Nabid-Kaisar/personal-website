@@ -44,8 +44,9 @@ export default function Contact() {
           <header style={{ fontSize: "1rem" }}> Book a meeting: </header>
           <fieldset>
             <legend>Enter Your Info</legend>
-            <label>Your email ID: </label>
+            <label htmlFor="email">Your email ID: </label>
             <input
+              id="email"
               value={email}
               onChange={handleEmailChange}
               name="email"
@@ -53,10 +54,10 @@ export default function Contact() {
             />
             <br />
             <button name="submit" onClick={handleFormSubmit} className="mr5">
-              Submit
+              Submit!
             </button>
             <button name="clear" onClick={handleClearForm}>
-              Clear
+              Clear x
             </button>
           </fieldset>
         </section>
