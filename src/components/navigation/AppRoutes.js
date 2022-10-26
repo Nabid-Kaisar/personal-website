@@ -1,7 +1,7 @@
 import { ROUTES } from "../../common/constants/CONSTANTS";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export default function Navigation() {
+export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
