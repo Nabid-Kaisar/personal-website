@@ -5,16 +5,14 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {ROUTES.map((RouteInfo, idx) => {
+        {ROUTES.map((routeInfo, idx) => {
           return (
             <Route
               style={{ marginRight: "5px" }}
               key={idx}
-              path={RouteInfo.route}
-              element={<RouteInfo.Component />}
-            >
-              {RouteInfo.pathName}
-            </Route>
+              path={routeInfo.route}
+              element={routeInfo.component}
+            />
           );
         })}
       </Routes>
