@@ -1,5 +1,6 @@
 import { CONTACT } from "../../common/constants/CONSTANTS";
-import { useState } from "react";
+import {useEffect, useState} from "react";
+import {LOREM_IPSUM} from "../../common/constants/LOREM_IPSUM"
 
 const initialState = {
   email: "",
@@ -9,6 +10,10 @@ const initialState = {
 export default function Contact() {
   const [email, setEmail] = useState(initialState.email);
   const [isSubmitted, setIsSubmitted] = useState(initialState.isSubmitted);
+
+  // useEffect(()=>{
+  //   throw new Error();
+  // },[])
 
   const handleEmailChange = (e) => {
     const { value: email } = e.target;
@@ -66,6 +71,9 @@ export default function Contact() {
             {isSubmitted &&
               "Your booking has been made! You will be notified via EMAIL."}
           </header>
+        </section>
+        <section>
+          {[...Array(10).keys()].map(()=> LOREM_IPSUM)}
         </section>
       </main>
     </>
