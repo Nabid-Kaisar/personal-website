@@ -1,7 +1,10 @@
-import Intro from "../../components/intro/Intro";
-import Contact from "../../components/contact/Contact";
-import Greetings from "../../components/greetings/Greetings";
-import Error from "../../components/error/Error";
+import React from "react";
+
+const Contact = React.lazy(()=> import("../../components/contact/Contact"));
+const Greetings = React.lazy(()=> import("../../components/greetings/Greetings"));
+const Intro = React.lazy(()=> import("../../components/intro/Intro"));
+const Error = React.lazy(()=> import("../../components/error/Error"));
+
 
 export const EXPERIENCE_DETAILS = {
   sync: { skill: "react, js, vanilla js, node.js" },
