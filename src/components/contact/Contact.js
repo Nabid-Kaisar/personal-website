@@ -1,6 +1,8 @@
 import { CONTACT } from "../../common/constants/CONSTANTS";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {LOREM_IPSUM} from "../../common/constants/LOREM_IPSUM"
+import {ThemeContext} from "../../contexts/ThemeContext";
+import useToggleTheme from "../../hooks/useToggleTheme";
 
 const initialState = {
   email: "",
@@ -10,6 +12,8 @@ const initialState = {
 export default function Contact() {
   const [email, setEmail] = useState(initialState.email);
   const [isSubmitted, setIsSubmitted] = useState(initialState.isSubmitted);
+
+  const [currentTheme, toggleTheme] = useToggleTheme();
 
   // useEffect(()=>{
   //   throw new Error();
@@ -34,8 +38,11 @@ export default function Contact() {
     setIsSubmitted(true);
   };
 
+
   return (
     <>
+      <div style={{float: 'right'}}>{currentTheme}</div>
+      <button onClick={toggleTheme}>toggle theme</button>
       <main>
         <section>
           <header>Get In Touch With Me:</header>
